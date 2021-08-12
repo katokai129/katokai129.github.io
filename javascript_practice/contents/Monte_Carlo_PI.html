@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>モンテカルロ法で円周率/過渡解しすてむ</title>
+        <link rel="stylesheet" href="../../test.css">
+        <script type="text/javascript" src="Monte_Carlo_PI/Monte_Carlo_PI.js"></script>
+    </head>
+
+    <body>
+
+        <main>
+
+            <p><iframe class="leftmenu" src="../../leftmenu.html"></iframe></p>
+
+            <p><iframe class="submenu" src="../javascript_practice_submenu.html" name="sub"></iframe></p>
+
+            <p>正方形の上に円を用意、点をランダムに打って内外の比率によって円周率を近似するプログラムだよ。</p>
+            <p>式だと4*中の点/全部の点になるよ。面積比とか考えるとどういう意味の式かわかるから暇だったら確かめてね！</p>
+            <canvas id="canvas_kun" width="600" height="600"></canvas>
+            <br>
+            <input name="exe_button" type="button" value="点を打つ！" onclick="hit_point();"/>
+            <input name="exe_button" type="button" value="百個点を打つ！" onclick="hit_hundred();"/>
+            <input name="exe_button" type="button" value="一万個点を打つ！" onclick="hit_million();"/>
+            <input name="exe_button" type="button" value="リセット！" onclick="init();"/>
+            <p><span>打った点 : </span><span id = "all_point">0</span></p>
+            <p><span>円の内部に入った点 : </span><span id = "in_circle">0</span></p>
+            <p><span>円周率の近似値 : </span><span id = "near_PI"></span></p>
+            <hr/>
+            <p>モンテカルロ法、これぞコンピュータって感じで個人的にすき(意味不明)</p>
+            <p>ちょっと調べてたら乱択アルゴリズムってのが関係あるらしいですね。精度の桁を一つ増やすためには試行を二桁増やす必要があるらしいです。(でも運が悪いとそれでもうまくいかないみたい...)</p>
+            
+        </main>
+
+</body>
+</html>

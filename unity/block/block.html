@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ブロック崩しクソエディション/過渡解システム</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="../../test.css">
+
+  </head>
+  <body>
+    <main>
+        
+        <p><iframe class="leftmenu" src="../../leftmenu.html"></iframe></p>
+
+        <p><iframe class="submenu" src="../unity_submenu.html" name="sub"></iframe></p>
+        <script src="TemplateData/UnityProgress.js"></script>  
+        <script src="Build/UnityLoader.js"></script>
+        <script>
+          var gameInstance = UnityLoader.instantiate("gameContainer", "Build/block.json", {onProgress: UnityProgress});
+        </script>
+
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">block</div>
+      </div>
+    </div>
+  </main></body>
+</html>

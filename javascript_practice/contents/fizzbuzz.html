@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>fizzbuzz/過渡解しすてむ</title>
+        <link rel="stylesheet" href="../../test.css">
+        <script type="text/javascript" src="fizzbuzz/fizzbuzz.js"></script>
+    </head>
+
+    <body>
+
+        <main>
+
+            <p><iframe class="leftmenu" src="../../leftmenu.html"></iframe></p>
+
+            <p><iframe class="submenu" src="../javascript_practice_submenu.html" name="sub"></iframe></p>
+            
+            <p>数を入力するとfizzbuzzしてくれるよ！半角で正の数をいれてね！<br>(数を数えていって、3の倍数ではfizz、5の倍数ではbuzzっていう遊びのプログラムだよ。<br>
+                10万をこえると危ない感じがしてくるから大きすぎる入力はやめたほうがいいかも...ていうか、fizzbuzzってどういう意味なんだろうね)</p>
+            <form name="form1" id="id_form1" action="">
+                <input name="textBox1" id="id_textBox1" type="text" value="" placeholder="数を入れてね!" />
+
+                <input name="exe_button" type="button" value="Exec" onclick="fizzbuzz();" />
+            </form>
+            <hr/>
+            <div><p  id="output"></p></div>
+        </main>
+
+</body>
+</html>
